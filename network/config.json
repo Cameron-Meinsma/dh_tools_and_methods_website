@@ -5,26 +5,26 @@
   "logo": {
     "file": "",
     "link": "",
-    "text": "Cameron"
+    "text": ""
   },
   "text": {
-    "more": "By applying the Yifan Hu Proportional Layout, one can examine which characteristics influence the creation of clusters.",
-    "intro": "Examining textual relations by applying the Yifan Hu Proportional Layout.",
-    "title": "Textual Relations"
+    "more": "",
+    "intro": "",
+    "title": "Network"
   },
   "legend": {
-    "edgeLabel": "Authorship Similarity",
-    "colorLabel": "Narrative Perspective",
-    "nodeLabel": "Year"
+    "edgeLabel": "The edge thickness/opacity is based on scores of stylistic similarity calculated by Stylo",
+    "colorLabel": "Colour Coding of the Nodes\nLight Blue: Fantasy from the United States\nDark Blue: Science Fiction from the United States\nGreen:from Science Fiction from the United Kingodm\nOrange: Fantasy from the United Kingdom ",
+    "nodeLabel": "Each node represents a novel. The node size is based on the Eigenvector centrality of each node. The colours represent four categories. The location of the nodes in this network are plotted by the Yifan Hu algorithm, which takes into account the undirected weighted edges between the novels."
   },
   "features": {
     "search": true,
-    "groupSelectorAttribute": "gender",
+    "groupSelectorAttribute": false,
     "hoverBehavior": "dim"
   },
   "informationPanel": {
     "groupByEdgeDirection": false,
-    "imageAttribute": false
+    "imageAttribute": "title"
   },
   "sigma": {
     "drawingProperties": {
@@ -40,10 +40,10 @@
       "defaultLabelSize": 14
     },
     "graphProperties": {
-      "maxEdgeSize": 0.5,
-      "minEdgeSize": 0.2,
-      "minNodeSize": 1,
-      "maxNodeSize": 7
+      "maxEdgeSize": 25,
+      "minEdgeSize": 5,
+      "minNodeSize": 3,
+      "maxNodeSize": 25
     },
     "mouseProperties": {
       "maxRatio": 20,
