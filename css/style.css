@@ -29,6 +29,11 @@
     font-size: 13px !important;
   }
 
+  .regular-text {
+    margin: 20px !important;
+    text-align: left;
+  }
+
   #index-network-btn {
     margin: auto auto 30px !important;
   }
@@ -46,7 +51,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-wrap: break-word;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 nav {
@@ -133,8 +138,16 @@ footer .footer-reg-links a:hover {
 
 .regular-text {
   color: #000000;
-  margin: 50px 250px 75px;
+  margin: 25px 250px;
   text-align: left;
+}
+
+.after-h1 {
+  margin-top: 50px;
+}
+
+.before-footer {
+  margin-bottom: 50px;
 }
 
 #index-network-btn {
