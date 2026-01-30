@@ -131,6 +131,10 @@ footer .footer-reg-links a:hover {
   flex-grow: 1;
 }
 
+.regular-text {
+  color: #000000;
+}
+
 #index-network-btn {
   color: var(--hero-background-color);
   background-color: var(--primary-color);
