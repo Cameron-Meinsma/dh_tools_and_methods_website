@@ -82,6 +82,61 @@
       <h2 class="regular-text">
         Scraping using Selenium and BeautifulSoup in Python
       </h2>
+      <div class="regular-text">
+        <p>
+          To collect the data, we used the novels that are part of Project
+          Gutenberg. These novels are generally allowed to be downloaded. To
+          elaborate, according to The Project Gutenberg License webpage, all the
+          eBooks on the Project Gutenberg website contain a disclaimer which
+          states that almost anyone is allowed to use these eBooks. However, it
+          does say as well that if one is located outside of the United States,
+          that one should check the laws of the country where one is located.
+          According to the Dutch Copyright Act, copyright applies until 70 years
+          after an author's death. Furthermore, there are authors in our dataset
+          that died less than 70 years ago, such as E. M. Forster. Therefore, to
+          comply with the Dutch Copyright Act as much as possible, while still
+          being able to conduct our research, we have decided to make the GitHub
+          repository private.
+        </p>
+        <p>
+          We started the data collection process by examining the robots.txt
+          file of the Project Gutenberg website, to make sure that scraping the
+          website is in compliance with its rules. According to the robots.txt
+          file, none of the user-agents are allowed to scrape anything from
+          webpages that contain /ebooks/search in their URL. Therefore, it seems
+          that scraping from the Science-Fiction & Fantasy Main Categories list
+          is allowed. To elaborate, the URL for this page is as follows:
+          'https://www.gutenberg.org/ebooks/bookshelf/638'. Furthermore, when
+          navigating to said list from the homepage, neither the homepage URL
+          nor any of the URLs of the subsequent webpages leading to the
+          Science-Fiction & Fantasy Main Categories list webpage, contain
+          /ebooks/search.
+        </p>
+        <p>
+          The scraping of the Science-Fiction & Fantasy Main Categories list was
+          done using Selenium and BeautifulSoup in Python in a Jupyter Notebook.
+          Moreover, the list consists of 4292 novels in total and it is sorted
+          by popularity from most to least popular. In other words, the list is
+          sorted based on the amount of downloads in the past 30 days. For each
+          one of these novels, we collected the title, author, amount of
+          downloads, and the plain text utf-8 link. However, we did have to
+          clean the data to get the utf-8 link. To elaborate, the utf-8 link was
+          solely available on the actual novel's webpage. Therefore, to get the
+          link, we would have to use Selenium to click on each novel, get the
+          link, and then navigate back to the Science-Fiction & Fantasy Main
+          Categories list. Thus, to limit the amount of time that it would take
+          to scrape the necessary info, and to lessen the risk of errors during
+          scraping, we decided to instead scrape the link to the novel's
+          webpage, and clean that column during the cleaning phase using Regex.
+          To illustrate, the most downloaded novel in the past 30 days is:
+          'Frankenstein; Or; The Modern Prometheus' written by Mary
+          Wollstonecraft Shelley. That novel's webpage URL is as follows:
+          'https://www.gutenberg.org/ebooks/84', whereas the utf-8 link is the
+          following: 'https://www.gutenberg.org/cache/epub/84/pg84.txt'. After
+          having cleaned the data, we turned the Pandas DataFrame into a CSV
+          file.
+        </p>
+      </div>
       <h2 class="regular-text">Stylometry in RStudio</h2>
       <h2 class="regular-text">Network Analysis in Gephi</h2>
     </div>
