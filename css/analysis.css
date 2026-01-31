@@ -1,0 +1,23 @@
+/* Images */
+figcaption {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: var(--off-black-text-color);
+  font-size: 14px;
+  font-style: italic;
+}
+
+.left-img:hover {
+  transform: scale(1.5) translateX(160px);
+  transition: all 25ms ease-in;
+}
+
+.right-img:hover {
+  transform: scale(1.5) translateX(-160px);
+  transition: all 25ms ease-in;
+}
+
+/* Text */
+.analysis-p {
+  text-align: left;
+}

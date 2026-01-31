@@ -1,0 +1,9 @@
+/* Gephi network visualization*/
+#gephi {
+  display: block;
+  margin: 0 auto;
+  padding-top: 25px;
+  margin-bottom: 25px;
+  height: 710px;
+  width: 90%;
+}
