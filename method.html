@@ -105,12 +105,15 @@
           file, none of the user-agents are allowed to scrape anything from
           webpages that contain /ebooks/search in their URL. Therefore, it seems
           that scraping from the Science-Fiction & Fantasy Main Categories list
-          is allowed. To elaborate, the URL for this page is as follows:
-          'https://www.gutenberg.org/ebooks/bookshelf/638'. Furthermore, when
-          navigating to said list from the homepage, neither the homepage URL
-          nor any of the URLs of the subsequent webpages leading to the
-          Science-Fiction & Fantasy Main Categories list webpage, contain
-          /ebooks/search.
+          is allowed. To elaborate, the URL for this page is as follows: '<a
+            href="https://www.gutenberg.org/ebooks/bookshelf/638"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.gutenberg.org/ebooks/bookshelf/638</a
+          >'. Furthermore, when navigating to said list from the homepage,
+          neither the homepage URL nor any of the URLs of the subsequent
+          webpages leading to the Science-Fiction & Fantasy Main Categories list
+          webpage, contain /ebooks/search.
         </p>
         <p>
           The scraping of the Science-Fiction & Fantasy Main Categories list was
@@ -130,11 +133,19 @@
           webpage, and clean that column during the cleaning phase using Regex.
           To illustrate, the most downloaded novel in the past 30 days is:
           'Frankenstein; Or; The Modern Prometheus' written by Mary
-          Wollstonecraft Shelley. That novel's webpage URL is as follows:
-          'https://www.gutenberg.org/ebooks/84', whereas the utf-8 link is the
-          following: 'https://www.gutenberg.org/cache/epub/84/pg84.txt'. After
-          having cleaned the data, we turned the Pandas DataFrame into a CSV
-          file.
+          Wollstonecraft Shelley. That novel's webpage URL is as follows: '<a
+            href="https://www.gutenberg.org/ebooks/84"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.gutenberg.org/ebooks/84</a
+          >', whereas the utf-8 link is the following: '<a
+            href="https://www.gutenberg.org/cache/epub/84/pg84.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://www.gutenberg.org/cache/epub/84/pg84.txt</a
+          >
+          '. After having cleaned the data, we turned the Pandas DataFrame into
+          a CSV file.
         </p>
       </div>
       <h2 class="regular-text">Stylometry in RStudio</h2>
