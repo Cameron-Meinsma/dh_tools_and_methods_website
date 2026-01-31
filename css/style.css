@@ -119,6 +119,10 @@ footer .right-column {
   font-size: 12px;
 }
 
+.bottom-role {
+  margin-bottom: 9px;
+}
+
 footer .footer-reg-links a,
 footer .footer-reg-links {
   color: #fff;
