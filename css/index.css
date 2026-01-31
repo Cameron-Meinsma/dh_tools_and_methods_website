@@ -1,3 +1,10 @@
+/* Media queries */
+@media (max-width: 767px) {
+  .hero {
+    padding: 12px !important;
+  }
+}
+
 /* Hero */
 .hero {
   text-align: center;
