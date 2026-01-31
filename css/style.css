@@ -160,6 +160,11 @@ footer .footer-reg-links a:hover {
   text-decoration: none;
 }
 
+#disclaimer {
+  color: #5c85be;
+  margin-bottom: 9px;
+}
+
 #footer-end-text {
   font-size: 15px;
   margin: 25px;
