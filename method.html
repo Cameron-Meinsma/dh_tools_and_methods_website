@@ -77,99 +77,151 @@
         </div>
       </div>
     </nav>
-    <div class="center-text">
-      <h1>Method</h1>
-      <h2 class="regular-text after-h1 h2-title">Ethical Considerations</h2>
-      <div class="regular-text">
-        <p>
-          To collect the data, we used the novels that are part of Project
-          Gutenberg. These novels are generally allowed to be downloaded. To
-          elaborate, according to
-          <a
-            href="https://www.gutenberg.org/policy/license.html"
-            target="_blank"
-            rel="noopener noreferrer"
-            >The Project Gutenberg License</a
-          >
-          webpage, all the eBooks on the Project Gutenberg website contain a
-          disclaimer which states that almost anyone is allowed to use these
-          eBooks. However, it does say as well that if one is located outside of
-          the United States, that one should check the laws of the country where
-          one is located. According to the
-          <a
-            href="https://business.gov.nl/regulations/copyright/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Dutch Copyright Act</a
-          >, copyright applies until 70 years after an author's death.
-          Furthermore, there are authors in our dataset that died less than 70
-          years ago, such as E. M. Forster. Therefore, to comply with the Dutch
-          Copyright Act as much as possible, while still being able to conduct
-          our research, we have decided to make the GitHub repositories private.
-        </p>
-        <p>
-          We started the data collection process by examining the robots.txt
-          file of the Project Gutenberg website, to make sure that scraping the
-          website is in compliance with its rules. According to the robots.txt
-          file, none of the user-agents are allowed to scrape anything from
-          webpages that contain /ebooks/search in their URL. Therefore, it seems
-          that scraping from the Science-Fiction & Fantasy Main Categories list
-          is allowed. To elaborate, the URL for this page is as follows: '<a
-            href="https://www.gutenberg.org/ebooks/bookshelf/638"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.gutenberg.org/ebooks/bookshelf/638</a
-          >'. Furthermore, when navigating to said list from the homepage,
-          neither the homepage URL nor any of the URLs of the subsequent
-          webpages leading to the Science-Fiction & Fantasy Main Categories list
-          webpage, contain /ebooks/search.
-        </p>
-      </div>
-      <h2 class="regular-text h2-title">
+    <div class="regular-text">
+      <h1 class="reg-h1">Method</h1>
+      <h2 class="h2-title">Ethical Considerations</h2>
+      <p>
+        To collect the data, we used the novels that are part of Project
+        Gutenberg. These novels are generally allowed to be downloaded. To
+        elaborate, according to
+        <a
+          href="https://www.gutenberg.org/policy/license.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          >The Project Gutenberg License</a
+        >
+        webpage, all the eBooks on the Project Gutenberg website contain a
+        disclaimer which states that almost anyone is allowed to use these
+        eBooks. However, it does say as well that if one is located outside of
+        the United States, that one should check the laws of the country where
+        one is located. According to the
+        <a
+          href="https://business.gov.nl/regulations/copyright/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Dutch Copyright Act</a
+        >, copyright applies until 70 years after an author's death.
+        Furthermore, there are authors in our dataset that died less than 70
+        years ago, such as E. M. Forster. Therefore, to comply with the Dutch
+        Copyright Act as much as possible, while still being able to conduct our
+        research, we have decided to make the GitHub repositories private.
+      </p>
+      <p>
+        We started the data collection process by examining the robots.txt file
+        of the Project Gutenberg website, to make sure that scraping the website
+        is in compliance with its rules. According to the robots.txt file, none
+        of the user-agents are allowed to scrape anything from webpages that
+        contain /ebooks/search in their URL. Therefore, it seems that scraping
+        from the Science-Fiction & Fantasy Main Categories list is allowed. To
+        elaborate, the URL for this page is as follows: '<a
+          href="https://www.gutenberg.org/ebooks/bookshelf/638"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://www.gutenberg.org/ebooks/bookshelf/638</a
+        >'. Furthermore, when navigating to said list from the homepage, neither
+        the homepage URL nor any of the URLs of the subsequent webpages leading
+        to the Science-Fiction & Fantasy Main Categories list webpage, contain
+        /ebooks/search.
+      </p>
+      <h2 class="h2-title">
         Scraping using Selenium and BeautifulSoup in Python
       </h2>
-      <div class="regular-text">
-        <p>
-          The scraping of the
-          <a
-            href="https://www.gutenberg.org/ebooks/bookshelf/638"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Science-Fiction & Fantasy Main Categories list</a
-          >
-          was done using Selenium and BeautifulSoup in Python in a Jupyter
-          Notebook. Moreover, the list consists of 4292 novels in total and it
-          is sorted by popularity from most to least popular. In other words,
-          the list is sorted based on the amount of downloads in the past 30
-          days. For each one of these novels, we collected the title, author,
-          amount of downloads, and the plain text utf-8 link. However, we did
-          have to clean the data to get the utf-8 link. To elaborate, the utf-8
-          link was solely available on the actual novel's webpage. Therefore, to
-          get the link, we would have to use Selenium to click on each novel,
-          get the link, and then navigate back to the Science-Fiction & Fantasy
-          Main Categories list. Thus, to limit the amount of time that it would
-          take to scrape the necessary info, and to lessen the risk of errors
-          during scraping, we decided to instead scrape the link to the novel's
-          webpage, and clean the respective column during the cleaning phase
-          using Regex. To illustrate, the most downloaded novel in the past 30
-          days is: 'Frankenstein; Or; The Modern Prometheus' written by Mary
-          Wollstonecraft Shelley. That novel's webpage URL is as follows: '<a
-            href="https://www.gutenberg.org/ebooks/84"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.gutenberg.org/ebooks/84</a
-          >', whereas the utf-8 link is the following: '<a
-            href="https://www.gutenberg.org/cache/epub/84/pg84.txt"
-            target="_blank"
-            rel="noopener noreferrer"
-            >https://www.gutenberg.org/cache/epub/84/pg84.txt</a
-          >
-          '. After having cleaned the data, we turned the Pandas DataFrame into
-          a CSV file.
-        </p>
-      </div>
-      <h2 class="regular-text h2-title">Stylometry in RStudio</h2>
-      <h2 class="regular-text h2-title">Network Analysis in Gephi</h2>
+      <p>
+        The scraping of the
+        <a
+          href="https://www.gutenberg.org/ebooks/bookshelf/638"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Science-Fiction & Fantasy Main Categories list</a
+        >
+        was done using Selenium and BeautifulSoup in Python in a Jupyter
+        Notebook. Moreover, the list consists of 4292 novels in total and it is
+        sorted by popularity from most to least popular. In other words, the
+        list is sorted based on the amount of downloads in the past 30 days. For
+        each one of these novels, we collected the title, author, amount of
+        downloads, and the plain text utf-8 link. However, we did have to clean
+        the data to get the utf-8 link. To elaborate, the utf-8 link was solely
+        available on the actual novel's webpage. Therefore, to get the link, we
+        would have to use Selenium to click on each novel, get the link, and
+        then navigate back to the Science-Fiction & Fantasy Main Categories
+        list. Thus, to limit the amount of time that it would take to scrape the
+        necessary info, and to lessen the risk of errors during scraping, we
+        decided to instead scrape the link to the novel's webpage, and clean the
+        respective column during the cleaning phase using Regex. To illustrate,
+        the most downloaded novel in the past 30 days is: 'Frankenstein; Or; The
+        Modern Prometheus' written by Mary Wollstonecraft Shelley. That novel's
+        webpage URL is as follows: '<a
+          href="https://www.gutenberg.org/ebooks/84"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://www.gutenberg.org/ebooks/84</a
+        >', whereas the utf-8 link is the following: '<a
+          href="https://www.gutenberg.org/cache/epub/84/pg84.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          >https://www.gutenberg.org/cache/epub/84/pg84.txt</a
+        >
+        '. After having cleaned the data, we turned the Pandas DataFrame into a
+        CSV file.
+      </p>
+      <h2 class="h2-title">Stylometry in RStudio</h2>
+      <p>
+        After scraping the titles from Project Gutenberg, we enriched the
+        dataset through entities linking with Wikidata in OpenRefine. For the
+        authors of the novels we retrieved the nationality and the gender. For
+        the novels, we reconciled the genre and publication year from wikidata.
+        Based on this metadata, we selected a corpus by filtering the list of
+        novels strictly on the assigned genre by wikidata (either fantasy or
+        science-fiction) and we filtered based on the nationality of the author
+        (either UK or US). We also kept only the most popular book per author in
+        the list, since having multiple titles by one author would compromise
+        the results of the stylometric analysis. For each author, the novel with
+        the most downloads was preserved in the dataset. After also filtering on
+        time period (1880-1980), we ended up with a selection of 44 novels,
+        balanced over four subcategories: fantasy from UK authors (UKF),
+        science-fiction from US authors (USS), fantasy from US authors (USF),
+        and science fiction from UK authors (UKS). We scraped the .txt files and
+        prepared a corpus folder for stylometric analysis in Stylo. Any clutter
+        that appears in Project Gutenberg .txt files was removed in python.
+      </p>
+      <p>
+        Stylo is a package in R that can generate dendrograms and bootstrap
+        consensus trees based on calculated stylistic distances between novels.
+        We ran 900 iterations from 100 to 1000 Most Frequent Words (MFW) in
+        order to solidify the credibility of the stylistic similarity between
+        the novels. We have used Burrow's Delta as the distance measure, since
+        it normalizes word frequencies into z-scores based on frequency and
+        text-length, making it a suitable distance measure for stylistic
+        analysis. We also configured Stylo to export the novels as nodes and the
+        stylistic similarity as weighted edges for further network analysis in
+        Gephi. The weights have been thresholded in python before loading the
+        nodes and edges into the table to filter out very weak stylistic
+        similarities between novels. To review the code and the process, you can
+        see our github repository.
+      </p>
+      <h2 class="h2-title">Network Analysis in Gephi</h2>
+      <p class="last-before-footer">
+        In Gephi, we plotted the graph using the Yifan Hu algorithm, which takes
+        into account the undirected weighted edges in our data. The sides of the
+        nodes represent the Eigenvector centrality score. This centrality
+        measure takes into account not only the weight of the edges, but also
+        the (weighted) edges of connected nodes, indicating how 'influential' a
+        node is based on the entire network rather than only its neighbours.
+        Furthermore, we adjusted the colours of the nodes based on attributes of
+        the novels and the author, giving us visual insights into the
+        distribution of the novels across a two-dimensional space based on these
+        attributes. In depth analysis of these network representations and the
+        stylometry results can be found in the Analysis section. Finally, we
+        exported the graph from Gephi to an interactive html/javascript
+        representation of the network using
+        <a
+          href="https://www.sigmajs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Sigma.js</a
+        >. You can access this interactive graph under the Network Visualization
+        tab.
+      </p>
     </div>
     <footer>
       <div class="container">
