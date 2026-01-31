@@ -98,7 +98,6 @@ footer {
 
 footer h4 {
   margin-top: 20px;
-  margin-left: 50px;
   font-size: 20px;
   color: #fff;
 }
@@ -114,23 +113,16 @@ footer .snumber {
 footer .footer-reg-links a,
 footer .footer-reg-links {
   color: #fff;
+  text-align: left;
   text-decoration: none;
-  margin: 20px 50px 20px 50px;
   font-size: 15px;
+  margin-top: 20px;
 }
 
 footer .footer-reg-links a:hover {
   cursor: pointer;
   transition: all 200ms ease-in;
   color: var(--primary-color);
-  text-decoration: none;
-}
-
-footer .footer-right p {
-  color: #fff;
-  display: inline-block;
-  margin: 20px 50px 20px 50px;
-  font-size: 15px;
   text-decoration: none;
 }
 
