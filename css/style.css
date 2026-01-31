@@ -105,8 +105,18 @@ footer .right-column {
   text-align: right;
 }
 
-footer .snumber {
+.name {
+  color: #5c85be;
+}
+
+.snumber {
+  font-size: 14px;
+}
+
+.roles {
   color: #cacaca;
+  font-style: italic;
+  font-size: 12px;
 }
 
 footer .footer-reg-links a,
