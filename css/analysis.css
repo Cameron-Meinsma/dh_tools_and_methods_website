@@ -31,6 +31,10 @@ figcaption {
 }
 
 /* Text */
+.analysis-h2-title {
+  margin-left: 65px;
+}
+
 .analysis-p {
   text-align: left;
 }
