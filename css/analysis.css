@@ -18,6 +18,13 @@
   }
 }
 
+@media (min-width: 1400px) {
+  /* Text */
+  .analysis-h2-title {
+    margin-left: 290px !important;
+  }
+}
+
 /* Images */
 figcaption {
   margin-top: 15px;
